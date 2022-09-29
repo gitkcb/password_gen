@@ -42,18 +42,29 @@ if(passSpecialCharacter === true){
   passCriteria.push(character);
 }
 console.log(passCriteria);
-for
 
-/*location= Math.floor(Math.random() *passCriteria.length);
-attribute = passCriteria[location];
+let choosearray = passCriteria[Math.floor(Math.random()*passCriteria.length)];
+console.log(choosearray);
+const passcode = () => {
+  
 
-/*for (let i=0; i < userChoice; i++){
-  spot= Math.floor(Math.random() * attribute.length);
+/*const passwordCode = () => {
+  let hello = [passCriteria];
+  /*let result= [hello[Math.floor(Math.random()* hello.length)]];
+  let goodbye = passCriteria[hello];
+  let arrayResult = [];
+  const passwordCode =() =>
+  var passcode= '';
+  for (let i = 0; i < userChoice; i++){
+    passcode = passcode + passCriteria[Math.floor(Math.random()* passCriteria.length)];
+    console.log(passcode);
 
-  }*/
+  };
+  return passcode*/
+  
 }
 
-  
+
 
 
 
