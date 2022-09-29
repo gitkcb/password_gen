@@ -12,20 +12,54 @@ let capLetter = ['A', 'B','C','D','E','F','G','H','I','J','K','L','M','N','O','P
 
 function generatePassword() {
  userChoice = (prompt("How many characters would you like in your password? Choose between 8 and 128 characters"));
-while(userChoice < 8 || userChoice > 128){
+if(userChoice < 8 || userChoice > 128){
   window.alert("Invalid Length");
   userChoice= (prompt("How many characters would you like in your password? Choose between 8 and 128 characters"));
-  }
-
- ;
-
-
+  };
   passLowercase = confirm('Do you want your password to contain lowercase letters?');
   passUppercase = confirm('Do you want your password to contain uppercase letters?');
   passNumber = confirm('Do you want your password to contain numbers?');
   passSpecialCharacter= confirm('Do you want your password to contain special characters?');
  
+ if(passLowercase !== true && passUppercase !== true && passNumber !== true && passSpecialCharacter !==true){
+  window.alert("Must meet at least ONE of the criteria listed");
+  passLowercase = confirm('Do you want your password to contain lowercase letters?');
+  passUppercase = confirm('Do you want your password to contain uppercase letters?');
+  passNumber = confirm('Do you want your password to contain numbers?');
+  passSpecialCharacter= confirm('Do you want your password to contain special characters?');
+ }
+let passCriteria = [];
+if (passLowercase === true){
+  passCriteria.push(alphabet);
 }
+if (passUppercase === true){
+  passCriteria.push(capLetter);
+}
+if(passNumber === true){
+  passCriteria.push(number);
+}
+if(passSpecialCharacter === true){
+  passCriteria.push(character);
+}
+console.log(passCriteria);
+for
+
+/*location= Math.floor(Math.random() *passCriteria.length);
+attribute = passCriteria[location];
+
+/*for (let i=0; i < userChoice; i++){
+  spot= Math.floor(Math.random() * attribute.length);
+
+  }*/
+}
+
+  
+
+
+
+
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
