@@ -43,24 +43,32 @@ if(passSpecialCharacter === true){
 }
 console.log(passCriteria);
 
-/*let choosearray = passCriteria[Math.floor(Math.random()*passCriteria.length)];
-console.log(choosearray);
-console.log(choosearray[Math.floor(Math.random()*choosearray.length)]);
 
-
-for(let i = 0; i < userChoice; i++) {
-  let code = choosearray[Math.floor(Math.random()*choosearray.length)];
-  console.log(code);*/
+  /*let code = ""
   for(let i = 0; i < userChoice; i++) {
     let choosearray = passCriteria[Math.floor(Math.random()*passCriteria.length)];
     console.log(choosearray);
     let code = choosearray[Math.floor(Math.random()*choosearray.length)];
     
     console.log(code);
-  };
+   
+    
+  }
+  return code;*/
+  let code = ''
+  const generateCode = () => {
+    for(let i = 0; i < userChoice; i++) {
+    let choosearray = passCriteria[Math.floor(Math.random()*passCriteria.length)];
+    console.log(choosearray);
+    let code = choosearray[Math.floor(Math.random()*choosearray.length)];
+    console.log(code);
  
-};
- 
+  }
+  return code;
+}
+  generateCode(code);
+
+}
 
 
 
