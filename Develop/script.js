@@ -43,26 +43,25 @@ if(passSpecialCharacter === true){
 }
 console.log(passCriteria);
 
-let choosearray = passCriteria[Math.floor(Math.random()*passCriteria.length)];
+/*let choosearray = passCriteria[Math.floor(Math.random()*passCriteria.length)];
 console.log(choosearray);
-const passcode = () => {
-  
+console.log(choosearray[Math.floor(Math.random()*choosearray.length)]);
 
-/*const passwordCode = () => {
-  let hello = [passCriteria];
-  /*let result= [hello[Math.floor(Math.random()* hello.length)]];
-  let goodbye = passCriteria[hello];
-  let arrayResult = [];
-  const passwordCode =() =>
-  var passcode= '';
-  for (let i = 0; i < userChoice; i++){
-    passcode = passcode + passCriteria[Math.floor(Math.random()* passCriteria.length)];
-    console.log(passcode);
 
+for(let i = 0; i < userChoice; i++) {
+  let code = choosearray[Math.floor(Math.random()*choosearray.length)];
+  console.log(code);*/
+  for(let i = 0; i < userChoice; i++) {
+    let choosearray = passCriteria[Math.floor(Math.random()*passCriteria.length)];
+    console.log(choosearray);
+    let code = choosearray[Math.floor(Math.random()*choosearray.length)];
+    
+    console.log(code);
   };
-  return passcode*/
-  
-}
+ 
+};
+ 
+
 
 
 
