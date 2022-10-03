@@ -49,28 +49,13 @@ console.log(passCriteria);
     let choosearray = passCriteria[Math.floor(Math.random()*passCriteria.length)];
     console.log(choosearray);
     let code = choosearray[Math.floor(Math.random()*choosearray.length)];
-    
     console.log(code);
-   passCode.push(code);
-   console.log(passCode);
+    passCode.push(code);
+    console.log(passCode);
    
   }
   return passCode.join('');
   
-  /*let code = "";
-
-  const generateCode = () => {
-    for(let i = 0; i < userChoice; i++) {
-      let choosearray = passCriteria[Math.floor(Math.random()*passCriteria.length)];
-    console.log(choosearray);
-    let code = choosearray[Math.floor(Math.random()*choosearray.length)];
-    console.log(code);
-    
-  }
-  return code;
-}
-  generateCode();
-*/
 }
 
 
