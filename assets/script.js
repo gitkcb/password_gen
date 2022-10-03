@@ -4,18 +4,19 @@ let passLowercase;
 let passUppercase;
 let passNumber;
 let passSpecialCharacter;
-
+//creates arrays holding all the characters available for the password
 let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 let character =['!', '"', '#', '$','%','&','(',')', '*','+', ',' ,'-','.','/',':',';','<','=','>','?','@','[',']','^','_','`', '{', '|','}','~'];
 let number =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let capLetter = ['A', 'B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-
+// function asking how many characters the password should be
 function generatePassword() {
  userChoice = (prompt("How many characters would you like in your password? Choose between 8 and 128 characters"));
 if(userChoice < 8 || userChoice > 128){
   window.alert("Invalid Length");
   userChoice= (prompt("How many characters would you like in your password? Choose between 8 and 128 characters"));
   };
+  //prompts asking which characters they want included in the password
   passLowercase = confirm('Do you want your password to contain lowercase letters?');
   passUppercase = confirm('Do you want your password to contain uppercase letters?');
   passNumber = confirm('Do you want your password to contain numbers?');
@@ -28,6 +29,7 @@ if(userChoice < 8 || userChoice > 128){
   passNumber = confirm('Do you want your password to contain numbers?');
   passSpecialCharacter= confirm('Do you want your password to contain special characters?');
  }
+ //pushes user-selected criteria into a new array to be used for randomization
 let passCriteria = [];
 if (passLowercase === true){
   passCriteria.push(alphabet);
@@ -42,7 +44,7 @@ if(passSpecialCharacter === true){
   passCriteria.push(character);
 }
 console.log(passCriteria);
-
+//randomizes selected characters into a password
 
   let passCode = [];
   for(let i = 0; i < userChoice; i++) {
@@ -54,6 +56,7 @@ console.log(passCriteria);
     console.log(passCode);
    
   }
+  //removes the commas in between the password
   return passCode.join('');
   
 }
